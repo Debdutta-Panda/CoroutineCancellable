@@ -43,7 +43,8 @@ class MainViewModel: ViewModel() {
                     number.value = it
                     if(it>5){
                         buttonText.value = "Run"
-                        cancel()
+                        //cancel()
+                        throw CancellationException()
                     }
                 }
                 .collect()
